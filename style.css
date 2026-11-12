@@ -23,6 +23,10 @@ body {
     letter-spacing: -0.5px;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     color: aliceblue;
     text-decoration: none;
@@ -38,6 +42,7 @@ a:hover{
     margin-left: auto;
     margin-right: auto;
     padding: 0 35px;
+    animation: OpenWebsite 5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .header {
@@ -70,6 +75,16 @@ a:hover{
     font-size: 18px;
     line-height: 1.2;
     margin-top: 5px;
+    animation: OpenWebsite 45s cubic-bezier(0.075, 0.82, 0.165, 1)   
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 .main {
@@ -99,9 +114,104 @@ a:hover{
 .welcome__title {
     line-height: 1;
     margin-bottom: 0px;
+    animation: OpenWebsite 15s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .welcome__img {
     margin-top: 210px;
     margin-bottom: -30px;
+}
+
+.welcome__img_1 {
+    animation: WelcomeImgTestAnim 1s infinite;
+    margin-top: 210px;
+    margin-bottom: -30px;
+}
+
+.welcome__img_2 {
+    animation: WelcomeImgTestAnim 1s infinite reverse;
+    margin-top: -180.2px;
+}
+
+
+@keyframes WelcomeImgTestAnim {
+    0%, 49.999% {
+        opacity: 100;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes OpenWebsite {
+    0%, 10% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    10%, 100%{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+
+.works {
+    margin-top: 380px;
+    margin-bottom: 30px;
+}
+
+.container {
+
+}
+
+.works__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 70%;
+    gap: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work {
+    height: 844px;
+    position: relative;
+
+}
+
+.work__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.work__name {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color:rgb(252, 252, 252);
+    font-size: 58px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+
+    background-color: #1f1e1f71;
+    transition: opacity 0.3s;
+
+}
+
+.work__name:hover {
+    opacity: 20%;
+}
+
+.bottom {
+    background: #1f1e1f;
+    padding: 20px 0;
 }
