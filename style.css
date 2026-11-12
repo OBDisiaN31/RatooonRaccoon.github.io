@@ -133,6 +133,7 @@ a:hover{
     display: block;
     width: 100%;
     height: auto;
+    animation: WelcomeImgTestAnim 1s steps(1) infinite forwards;
 }
 
 .welcome__img_2 {
@@ -141,7 +142,7 @@ a:hover{
     left: 0;
     width: 100%;
     height: auto;
-    animation: WelcomeImgTestAnim 1s steps(1) infinite;
+    animation: WelcomeImgTestAnim 1s steps(1) infinite reverse backwards;
 }
 
 @keyframes WelcomeImgTestAnim {
