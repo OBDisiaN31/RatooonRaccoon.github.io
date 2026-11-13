@@ -18,8 +18,8 @@ body {
     font-family: "Alegreya Sans SC", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 22px;
-    line-height: 1.5px;
+    font-size:  clamp(18px, 1.2vw, 36px);
+    line-height: 1.5;
     letter-spacing: -0.5px;
 }
 
@@ -38,10 +38,11 @@ a:hover{
 }
 
 .container {
-    max-width: 1720px;
+    width: 85vw;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 35px;
+    padding: 0 2vw;
     animation: OpenWebsite 5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -62,17 +63,13 @@ a:hover{
 
 .header__nav {
     display: flex;
-    font-size: 28px;
-    gap: 30px;
-}
-
-.header__link {
-
+    font-size: clamp(20px, 1.5vw, 42px);
+    gap: 2vw;
 }
 
 .welcome__text {
     color:rgb(143, 140, 142);
-    font-size: 18px;
+    font-size: clamp(16px, 1vw, 30px);
     line-height: 1.2;
     margin-top: 5px;
     animation: OpenWebsite 45s cubic-bezier(0.075, 0.82, 0.165, 1)   
@@ -87,13 +84,6 @@ a:hover{
   }
 }
 
-.main {
-
-}
-
-.welcome {
-
-}
 
 .welcome .container {
     display: flex;
@@ -103,30 +93,21 @@ a:hover{
     text-align: center;
 }
 
-.welcome__desc {
-    
-}
-
-.container {
-
-}
 
 .welcome__title {
+    font-size: clamp(28px, 2.2vw, 64px);
     line-height: 1;
     margin-bottom: 0px;
     animation: OpenWebsite 15s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
-.welcome__img {
-    margin-top: 210px;
-    margin-bottom: -30px;
-}
 
 .welcome__avatar {
     position: relative;
-    width: 450px;
-    margin-top: 210px;
-    margin-bottom: -30px;
+    width: clamp(280px, 24vw, 750px);
+    margin-top: 10vw;
+    margin-bottom: -1.2vw;
+    padding-bottom: 50px;
 }
 
 .welcome__img_1 {
@@ -166,7 +147,7 @@ a:hover{
 }
 
 .works {
-    margin-top: 380px;
+    margin-top: 280px;
     margin-bottom: 30px;
 }
 
@@ -177,14 +158,16 @@ a:hover{
 .works__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 70%;
-    gap: 45px;
+    max-width: 100%;
+    gap: 2.5wv;
     margin-left: auto;
     margin-right: auto;
+    column-gap: clamp(20px, 0.5vw, 80px);
 }
 
 .work {
-    height: 844px;
+    aspect-ratio: 1/1.8;
+    height: auto;
     position: relative;
 
 }
@@ -208,7 +191,7 @@ a:hover{
     align-items: center;
 
     color:rgb(252, 252, 252);
-    font-size: 58px;
+    font-size: clamp(28px, 3vw, 90px);
     line-height: 1.2;
     font-weight: 700;
     text-align: center;
@@ -222,7 +205,60 @@ a:hover{
     opacity: 20%;
 }
 
-.bottom {
+.aboutme {
+    margin-top: 7vw;
+    margin-bottom: 6vw;
+}
+.aboutme .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.aboutme_title {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.aboutme_img {
+    width: clamp(200px, 18vw, 550px);
+    height: clamp(200px, 18vw, 550px);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info_textblock {
+    margin-left: 3vw;
+    font-size: clamp(20px, 1.8vw, 52px);
+    line-height: 1.2;
+}
+
+.footer {
     background: #1f1e1f;
-    padding: 20px 0;
+    padding: 1.5vw 0;
+    font-size: clamp(16px, 1.1vw, 30px);
+    color:#6b696b
+}
+
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.socials_link {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.socials_img {
+    width: clamp(20px, 1.4vw, 40px);
+    height: auto;
+    display: flex;
 }
